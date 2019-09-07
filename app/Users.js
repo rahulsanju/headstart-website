@@ -14,6 +14,7 @@ var StudentSchema = new Schema({
 	round1Marks : {type : String, required:false, default: "0"},
 	moneypaid : {type : Number, required : false, default : 0},
 	didpay : {type : Boolean, required : false, default : false},
-	round1Marks : {type: Number,required: false, default : 0}
+	round1Marks : {type: Number,required: false, default : 0},
+	time : {type: Number , required:true}
 });
 module.exports= mongoose.model ('Student',StudentSchema);

@@ -5,6 +5,36 @@ var jwt = require('jsonwebtoken');
 var secret = "narutoshippuden";
 
 
+
+
+router.get('/participants',function(req,res){
+    const MongoClient = require('mongodb').MongoClient;
+    const uri = "mongodb+srv://rahulmora007:Akagami%40123@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
+    const client = new MongoClient(uri, { useNewUrlParser: true });
+    client.connect(err => {
+        if(err){
+            res.send(err);
+        }else{
+            const collection = client.db("headstart").collection("students");
+            collection.find({}).sort({'time':1}).toArray( function(err,result){
+                if(err){
+                    res.json({
+                        success : false,
+                        message : "Error connecting to our servers!"
+                    });
+                }else{
+                    res.json({
+                        success : true,
+                        data : result
+                    });
+                }
+            });
+            client.close();    
+        }
+    })
+});
+
+
 router.post('/login',function(req,res){
     var uname = req.body.username;
     var password = req.body.password;
@@ -46,7 +76,9 @@ router.post('/a',function(req,res){
 	user.StudentName = req.body.StudentName;
 	user.College = req.body.College;
 	user.EmailId = req.body.EmailId;
-	user.Contact = req.body.Contact;
+    user.Contact = req.body.Contact;
+    var timeStamp = Math.floor(Date.now() / 1000);
+    user.time = timeStamp;
 	
 	if (user.StudentName==""||user.StudentName==null||user.College==""||user.College==null||user.EmailId==""||user.EmailId==null||user.Contact==""||user.Contact==null)
 	{

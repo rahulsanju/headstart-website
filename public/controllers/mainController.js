@@ -1,6 +1,12 @@
 angular.module('mainController',['mainServices'])
 .controller('mainCtrl',function(mainServiceFactory,$location,$scope,$timeout){
     app=this;
+
+    app.userLogin = function(loginData){
+        mainServiceFactory.userLogin(loginData).then(function(data){
+            console.log(data);
+        });
+    }
     
     app.sendDetails = function(studData){
         mainServiceFactory.sendDetails(studData).then(function(data){
@@ -89,4 +95,17 @@ angular.module('mainController',['mainServices'])
             });
         }
 
+})
+
+.controller('userController',function(mainServiceFactory,$window){
+        app=this;
+        app.reload=function(){
+            $window.location.reload();
+        }
+        mainServiceFactory.getParticipants().then(function(data){
+            if(data.data.success){
+                app.users = data.data.data;
+                console.log(data);
+            }
+        });    
 });

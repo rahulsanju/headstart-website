@@ -16,5 +16,13 @@ angular.module('mainServices',[])
     mainService.submitTest = function(submit){
         return $http.post('/api/submitTest',submit);
     }
+
+    mainService.userLogin = function(data){
+        return $http.post('/api/login',data);
+    }
+    mainService.getParticipants = function(){
+        return $http.get('/api/participants');
+    }
+
     return mainService;
 });

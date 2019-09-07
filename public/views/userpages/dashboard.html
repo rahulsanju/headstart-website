@@ -1,0 +1,26 @@
+<div class="page-header container">
+    <button ng-click=user.reload() class="btn btn-success"> reload? </button>
+</div>
+<div class="container">
+    <table class="table">
+
+        <tr>
+            <th>Sno</th>
+            <th>Name</th>
+            <th>email</th>
+            <th>mobile</th>
+            <th>college</th>
+        </tr>
+        <tr ng-repeat="u in user.users">
+            <th>{{user.users.indexOf(u)+1}}</th>
+            <th>{{u.StudentName}}</th>
+            <th>{{u.EmailId}}</th>
+            <th>{{u.Contact}}</th>
+            <th>{{u.College}}</th>
+
+        </tr>
+        
+        
+    </table>
+
+</div>

@@ -16,6 +16,14 @@ app.config(function($routeProvider,$locationProvider){
     .when('/thankyou',{
         templateUrl : 'views/thankYou.html'
     })
+    .when('/login',{
+        templateUrl : 'views/userpages/userlogin.html'
+    })
+    .when('/headstartqwerty/dashboard',{
+        templateUrl : 'views/userpages/dashboard.html',
+        controller : 'userController',
+        controllerAs : 'user'
+    })
     
     
     .otherwise({redirectTo:'/'});
