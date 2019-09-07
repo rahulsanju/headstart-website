@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/">
+	<title>Mr/Miss Headstart</title>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+  <!--custom style sheets-->
+  
+
+
+	<!--cdn Style Sheets -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+
+	<!--Bootstrap and jquery JS files-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+	
+	<!--angular JS files -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+   <!--Angular JS public files-->
+   <script type="text/javascript" src="app.js"></script>
+   <script type="text/javascript" src="route.js"></script>
+
+   <!--Angular JS Controllers-->
+   <script type="text/javascript" src="controllers/mainController.js"></script>
+
+   <script type="text/javascript" src="services/mainServices.js"></script>
+  <style>
+  </style>   
+  <script>
+    new WOW().init();
+  </script>
+</head>
+<body ng-controller="mainCtrl as main"  ng-app='Headstart'>
+  <div ng-view></div>
+
+</body>

@@ -1,0 +1,75 @@
+<div  class="container">
+    <br><br>
+    <form class="well form-horizontal" name="detailsForm" ng-submit="main.sendDetails(studData)"  id="contact_form">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Tell us about yourself!</legend>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+            <label class="col-md-4 control-label">Full Name</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input ng-model="studData.StudentName"  name="first_name" placeholder="Full Name" class="form-control"  type="text">
+            </div>
+            </div>
+            </div>
+
+            <!-- Text input-->
+                <div class="form-group">
+            <label class="col-md-4 control-label">E-Mail</label>  
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input ng-model="studData.EmailId" name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                </div>
+            </div>
+            </div>
+
+
+            <!-- Text input-->
+                
+            <div class="form-group">
+            <label class="col-md-4 control-label">Phone #</label>  
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input ng-model="studData.Contact" name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                </div>
+            </div>
+            </div>
+
+            <!--Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">College Name </label>  
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-university"></i></span>
+                <input ng-model="studData.College" name="college" placeholder="Name of the college" class="form-control" type="text">
+                </div>
+                </div>
+            </div>
+
+            
+
+
+
+            
+            <div class="alert {{main.alert}}" role="alert" id="success_message">{{main.message}}</div>
+
+            <!-- Button -->
+            <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-warning" >Take the Test!  <span class="glyphicon glyphicon-send"></span></button>
+            </div>
+            </div>
+
+            </fieldset>
+</form>
+</div>
+
+
