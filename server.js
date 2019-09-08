@@ -24,7 +24,7 @@ app.use('/api',sampleApis);
 
 
 
-mongoose.connect('mongodb+srv://rahulmora007:Akagami@123@cluster0-pb6fc.mongodb.net/headstart?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://rahulmora007:<password>@cluster0-pb6fc.mongodb.net/headstart?retryWrites=true&w=majority',{
 	useNewUrlParser: true
   },function(err){
 	if(err){
