@@ -39,7 +39,7 @@ router.post('/login',function(req,res){
     var uname = req.body.username;
     var password = req.body.password;
     const MongoClient = require('mongodb').MongoClient;
-    const uri = "mongodb+srv://rahulmora007:<password>@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://rahulmora007:Akagami%40123@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
     const client = new MongoClient(uri, { useNewUrlParser: true });
     client.connect(err => {
         if(err){
@@ -137,7 +137,7 @@ router.get('/q/checkToken/:token',function(req,res){
             }
             else{
                 const MongoClient = require('mongodb').MongoClient;
-                const uri = "mongodb+srv://rahulmora007:<password>@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
+                const uri = "mongodb+srv://rahulmora007:Akagami%40123@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
                 const client = new MongoClient(uri, { useNewUrlParser: true });
                 client.connect(err => {
                     if(err){
@@ -183,7 +183,7 @@ router.get('/q/checkToken/:token',function(req,res){
 
 router.get('/q',function(req,res){
     const MongoClient = require('mongodb').MongoClient;
-    const uri = "mongodb+srv://rahulmora007:<password>@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://rahulmora007:Akagami%40123@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
     const client = new MongoClient(uri, { useNewUrlParser: true });
     client.connect(err => {
         if(err){
@@ -222,7 +222,7 @@ router.post('/submitTest',function(req,res){
             else{
                 var email = decoded.EmailId;
                 const MongoClient = require('mongodb').MongoClient;
-                const uri = "mongodb+srv://rahulmora007:<password>@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
+                const uri = "mongodb+srv://rahulmora007:Akagami%40123@cluster0-pb6fc.mongodb.net/test?retryWrites=true&w=majority";
                 const client = new MongoClient(uri, { useNewUrlParser: true });
                 client.connect(err => {
                     if(err){

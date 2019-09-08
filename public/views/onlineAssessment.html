@@ -17,8 +17,8 @@
       <li>
         The test has 4 sections.
         <ol>1) Aptitude</ol>
-        <ol>2) Verbal Ability</ol>
-        <ol>3) Non Verbal</ol>
+        <ol>2) Verbal ability</ol>
+        <ol>3) Blood Relations</ol>
       </li>       
       <li>Each Question has 4 options and only one among them is right. Click the Submit button if you have finished your test.</li>
       <li>Each question carries 2 marks and selection is done based on the relative performace of all participants!</li></b></p>
@@ -26,31 +26,9 @@
   </div>
   <div class="container">
   <h3>Questions</h3>        
-    <!--<ul class="pagination">
-      <li id="ques1" class="page-item"><a class="page-link" href="#1">1</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#2">2</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#3">3</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#4">4</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques5">5</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques6">6</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques7">7</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques8">8</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques9">9</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques10">10</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques11">11</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques12">12</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques13">13</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques14">14</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques15">15</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques16">16</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques17">17</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques18">18</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques19">19</a></li>
-      <li id="ques1" class="page-item"><a class="page-link" href="#ques20">20</a></li>
-    </ul>-->
 </div>
 <div class="container">
-  <form >
+  <form>
       <div ng-repeat="q in test.q">
           <h5 id="{{q.qid}}"><b>{{q.qid}})</b> {{q.ques}}</h5>
           <p><u>Section:</u>   {{q.qsec}}</p>
@@ -59,7 +37,7 @@
           </div>
           <br><br>
         </div><br>
-        <center><input type="submit"  data-toggle="modal" data-target="#myModal" class="btn btn-danger" value="Submit the test?"></center>
+        <center><button type="button" ng-click="test.submitTest()"  class="btn btn-success" data-dismiss="modal">Yes, Submit</button></center>
   </form>
 
   <br>

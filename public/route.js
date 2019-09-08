@@ -3,7 +3,7 @@ var app = angular.module('appRoute',['ngRoute']);
 app.config(function($routeProvider,$locationProvider){
     $routeProvider
     .when('/',{
-        templateUrl : '/views/home.html'
+        templateUrl : '/views/final-one.html'
     })
     .when('/onlineAssessment/:token',{
         templateUrl : 'views/onlineAssessment.html',
